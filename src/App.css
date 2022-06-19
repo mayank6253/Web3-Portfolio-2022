@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+section {
+  max-width: 1440px;
+  margin: auto;
+}
+/* NAVBAR */
+img.logo-png {
+  max-width: 100px;
+}
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+img.bg {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+/* MAIN */
+.main-content {
+  position: absolute;
+  top: 25%;
+  left: 46%;
+  transform: translate(-50%, 50%);
+}
+.main-content h3::before {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 2px;
+  background-color: #862121;
+  margin-top: -1.5px;
+  position: absolute;
+  left: -2%;
+  top: 8%;
+}
+h3.hello {
+  color: #862121;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'montserrat-bold', sans-serif;
+  padding-top: 10px;
+  padding-left: 50px;
+  letter-spacing: 4px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1.heading {
+  width: 89%;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'librebaskerville-bold', serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.scroll-down {
+  padding-top: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 15px;
+  position: absolute;
+  font-family: 'montserrat-bold', sans-serif;
+  top: 90%;
+  left: 19%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.scroll {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+}
+.scroll:hover {
+  color: #fff;
+}
+.myPortfolio {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(50%, 50%);
+}
+.right-column {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+}
+.buttons {
+  display: grid;
+}
+.button {
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'montserrat-bold', sans-serif;
+  text-decoration: none;
+  padding: 10px 20px 0px;
+  margin-bottom: 20px;
+  width: 220px;
+  height: 50px;
+  letter-spacing: 2px;
+  transition: 0.5s ease-in-out;
+}
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.social-links {
+  display: grid;
+  margin-left: 90px;
+  margin-top: -80px;
+  font-size: 20px;
+}
+.social-links::after {
+  display: block;
+  content: '';
+  height: 17.4rem;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  top: 140px;
+  bottom: 0px;
+  right: 8px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1280px) {
+  h1.heading {
+    width: 100%;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'librebaskerville-bold', serif;
   }
-  to {
-    transform: rotate(360deg);
+  .main-content {
+    position: absolute;
+    top: 29%;
+    left: 46%;
+    transform: translate(-50%, 50%);
+  }
+  .myPortfolio {
+    position: absolute;
+    top: 49%;
+    left: 60%;
+    transform: translate(50%, 50%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-content {
+    position: absolute;
+    top: 21%;
+    left: 38%;
+    transform: translate(-50%, 50%);
+  }
+  .social-links {
+    display: grid;
+    margin-left: 20px;
+    margin-top: -80px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .main-content {
+    top: 40%;
+  }
+  .social-links {
+    margin-left: 120px;
+  }
+  .myPortfolio {
+    top: 65%;
+    right: 58%;
+    left: 0%;
+  }
+  .buttons {
+    display: flex;
+  }
+  .button {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .main-content {
+    top: 37%;
+  }
+  .myPortfolio {
+    top: 72%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myPortfolio {
+    top: 70%;
+  }
+  .main-content {
+    top: 19%;
+  }
+  .scroll-down {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .main-content {
+    top: 16%;
+  }
+  h1.heading {
+    font-size: 2rem;
+  }
+  .buttons {
+    display: grid;
+  }
+  .myPortfolio {
+    top: 52%;
+    right: 70%;
+  }
+  .social-links {
+    display: none;
+  }
+  .scroll-down {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    top: 5%;
+  }
+  .myPortfolio {
+    top: 60%;
+    right: 63%;
+  }
+  .social-links {
+    display: none;
+  }
+  .scroll-down {
+    margin-top: 5px;
+    left: 6%;
   }
 }
